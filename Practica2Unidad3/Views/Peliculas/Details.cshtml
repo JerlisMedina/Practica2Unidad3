@@ -1,0 +1,66 @@
+﻿@model Pract2Unidad3.Models.TBL_PELICULA
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Pelicula</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Titulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Director)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Director)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AutorPrincipal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AutorPrincipal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.No_Actores)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.No_Actores)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Duracion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Duracion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estreno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estreno)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink(" Editar", "Edit", new { id = Model.Codigo }, new { @class = "glyphicon glyphicon-edit" }) |
+    @Html.ActionLink(" Ver Lista", "Index", null, new { @class = "glyphicon glyphicon-backward" })
+</p>

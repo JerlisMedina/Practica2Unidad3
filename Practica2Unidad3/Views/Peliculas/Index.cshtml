@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Pract2Unidad3.Models.TBL_PELICULA>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Lista de Peliculas</h2>
+
+<p>
+    @Html.ActionLink("Crear Nuevo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Titulo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Director)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AutorPrincipal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.No_Actores)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Duracion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estreno)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Titulo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Director)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AutorPrincipal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.No_Actores)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Duracion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estreno)
+        </td>
+        <td>
+            @Html.ActionLink(" Edit", "Edit", new { id=item.Codigo },new { @class = "glyphicon glyphicon-edit" }) |
+            @Html.ActionLink(" Details", "Details", new { id=item.Codigo }, new { @class = "glyphicon glyphicon-th-list" }) |
+            @Html.ActionLink(" Delete", "Delete", new { id=item.Codigo }, new { @class = "glyphicon glyphicon-remove" })
+        </td>
+    </tr>
+}
+
+</table>
